@@ -1,0 +1,8 @@
+<div>
+  {{#each @todos as |todo|}}
+    <Todo
+      @isComplete={{todo.isComplete}}
+      @text={{todo.text}}
+    />
+  {{/each}}
+</div>
