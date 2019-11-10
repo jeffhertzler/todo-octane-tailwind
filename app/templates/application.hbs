@@ -44,44 +44,12 @@
         >
       </div>
       <div>
-        <div
-          class="
-            border-b
-            flex
-            group
-            items-center
-            p-4
-            text-2xl
-          "
-        >
-          <input
-            type="checkbox"
-            class="
-              hocus:border-green-400
-              focus:shadow-none
-              form-checkbox
-              text-green-400
-            "
-          >
-          <div class="flex-grow px-4">
-            Todo Text
-          </div>
-          <button
-            class="
-              -mt-1
-              hocus:text-red-400
-              focus:outline-none
-              group-hocus:text-red-200
-              leading-none
-              outline-none
-              padding-0
-              text-3xl
-              text-transparent
-            "
-          >
-            <span class="hocus:text-red-400">×</span>
-          </button>
-        </div>
+        {{#each @model as |todo|}}
+          <Todo
+            @isComplete={{todo.isComplete}}
+            @text={{todo.text}}
+          />
+        {{/each}}
       </div>
       <div class="
           flex
