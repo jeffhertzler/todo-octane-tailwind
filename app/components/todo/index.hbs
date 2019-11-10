@@ -18,7 +18,7 @@
     @type="checkbox"
     @checked={{@isComplete}}
   />
-  <div class="flex-grow px-4">
+  <div class="flex-grow px-4 {{if @isComplete 'line-through text-gray-400' 'text-gray-800'}}">
     {{@text}}
   </div>
   <button
@@ -34,6 +34,6 @@
       text-transparent
     "
   >
-    <span class="hocus:text-red-400">×</span>
+    <span class="font-hairline hocus:text-red-400">×</span>
   </button>
 </div>
