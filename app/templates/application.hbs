@@ -1,5 +1,84 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="
+    bg-gray-100
+    font-hairline
+    h-screen
+    w-full
+  "
+>
+  <div class="max-w-xl mx-auto">
+    <h1
+      class="
+        leading-none
+        py-3
+        text-7xl
+        text-center
+        text-red-200
+      "
+    >
+      todos
+    </h1>
+    <div class="bg-white shadow">
+      <div class="flex border-b items-center">
+        <button class="focus:outline-none hocus:text-gray-700 px-5 text-gray-400 text-2xl">
+          <span class="inline-block rotate-90">❯</span>
+        </button>
+        <input
+          placeholder="What needs to be done?"
+          class="
+            font-hairline
+            outline-none
+            px-2
+            py-4
+            placeholder-gray-400
+            text-2xl
+            w-full
+          "
+        >
+      </div>
+      <div>
+        <div class="border-b flex group items-center p-4 text-2xl">
+          <input
+            type="checkbox"
+            class="form-checkbox focus:shadow-none hocus:border-green-400 text-green-400"
+          >
+          <div class="flex-grow px-4">
+            Todo Text
+          </div>
+          <button
+            class="
+              -mt-1
+              hocus:text-red-400
+              focus:outline-none
+              group-hocus:text-red-200
+              leading-none
+              outline-none
+              padding-0
+              text-3xl
+              text-transparent
+            "
+          >
+            <span class="hocus:text-red-400">×</span>
+          </button>
+        </div>
+      </div>
+      <div class="
+          flex
+          items-center
+          justify-between
+          px-4
+          py-2
+          text-gray-400
+          text-sm
+        "
+      >
+        <div class="w-1/4">1 item left</div>
+        <div class="flex flex-grow items-center justify-center leading-none">
+          <button class="appearance-none mx-1 px-2 py-1 border border-red-300 hocus:border-red-200 focus:outline-none rounded">All</button>
+          <button class="appearance-none mx-1 px-2 py-1 border border-transparent hocus:border-red-200 focus:outline-none rounded">Active</button>
+          <button class="appearance-none mx-1 px-2 py-1 border border-transparent hocus:border-red-200 focus:outline-none rounded">Completed</button>
+        </div>
+        <button class="appearance-none text-right w-1/4 hocus:underline focus:outline-none">Clear Completed (1)</button>
+      </div>
+    </div>
+  </div>
+</div>
