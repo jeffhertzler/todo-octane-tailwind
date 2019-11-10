@@ -2,7 +2,7 @@ import Route from "@ember/routing/route";
 import { Todo } from "todo-octane-tailwind/types/todo";
 
 export default class Application extends Route {
-  model(): [Todo] {
+  model(): Todo[] {
     return [
       {
         isComplete: true,
