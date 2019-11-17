@@ -5,7 +5,10 @@ const autoprefixer = require("autoprefixer");
 const tailwind = require("tailwindcss");
 
 module.exports = function(defaults) {
-  let app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
+    babel: {
+      plugins: [require.resolve("ember-auto-import/babel-plugin")]
+    },
     postcssOptions: {
       compile: {
         plugins: [tailwind("app/styles/tailwind.js"), autoprefixer()]
