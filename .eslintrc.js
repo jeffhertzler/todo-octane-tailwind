@@ -3,7 +3,10 @@ module.exports = {
   parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   plugins: ["ember"],
   extends: ["eslint:recommended", "plugin:ember/recommended"],
@@ -17,8 +20,8 @@ module.exports = {
     // node files
     {
       files: [
-        ".eslintrc.js",
         ".ember-cli.js",
+        ".eslintrc.js",
         ".template-lintrc.js",
         "ember-cli-build.js",
         "testem.js",
