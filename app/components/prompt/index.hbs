@@ -10,7 +10,7 @@
   >
     <span class="inline-block rotate-90">❯</span>
   </button>
-  <input
+  <Input
     placeholder="What needs to be done?"
     class="
       font-hairline
@@ -22,5 +22,7 @@
       text-gray-800
       w-full
     "
-  >
+    @value={{this.text}}
+    @enter={{fn this.create}} {{!-- I shouldn't need fn/action here! --}}
+  />
 </div>

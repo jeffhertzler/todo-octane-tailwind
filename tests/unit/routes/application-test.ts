@@ -4,8 +4,8 @@ import { setupTest } from 'ember-qunit';
 module('Unit | Route | application', function(hooks) {
   setupTest(hooks);
 
-  test('it exists', function(assert) {
+  test('it defaults to an empty array for model', function(assert) {
     const route = this.owner.lookup('route:application');
-    assert.ok(route);
+    assert.deepEqual(route.model(), []);
   });
 });

@@ -19,8 +19,8 @@
       todos
     </h1>
     <div class="bg-white shadow">
-      <Prompt />
-      <Todos @todos={{@model}} />
+      <Prompt @create={{this.create}} />
+      <Todos @todos={{this.model}} />
       <Footer />
     </div>
   </div>
